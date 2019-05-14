@@ -10,7 +10,7 @@ public class LandOfTurtles {
 		String galapagosIslands = "https://farm2.staticflickr.com/1104/752631367_5c5d474ba5_o.jpg";
 
 		// 1. Instantiate a JFrame object & make it visible
-
+		
 		// 2. Add the panel to the frame
 
 		// 3. Set the background image of the panel to the Galapagos Islands

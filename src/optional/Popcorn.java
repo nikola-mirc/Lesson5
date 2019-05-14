@@ -18,14 +18,14 @@ class Microwave {
 	}
 
 	void setTime(int cookTimeInMinutes) {
-		System.out.println("Microwave says: cook time is set to " + cookTime + " minutes.");
+		System.out.println("Microwave says: cook time is set to " + cookTimeInMinutes + " minutes.");
 		this.cookTime = cookTimeInMinutes;
 	}
 
 	void startMicrowave() {
 		if (thingToBeCooked == null)
 			System.out.println("Microwave says: there's nothing in the microwave!");
-		for (int i = 0; i < cookTime*10 + 1; i++) {
+		for (int i = 0; i < cookTime * 10 + 1; i++) {
 			thingToBeCooked.applyHeat();
 		}
 	}
@@ -40,7 +40,6 @@ public class Popcorn {
 		this.flavor = flavor;
 		System.out.println("Popcorn says: making package of " + this.flavor + " popcorn.");
 	}
-
 
 	public void applyHeat() {
 		pause();
@@ -60,8 +59,16 @@ public class Popcorn {
 			e.printStackTrace();
 		}
 	}
-	
+
+	public static void main(String[] args) {
+
+		Microwave T1000 = new Microwave();
+		Popcorn JollyTime = new Popcorn("cheddar");
+		T1000.putInMicrowave(JollyTime);
+		T1000.setTime(3);
+		T1000.startMicrowave();
+		JollyTime.applyHeat();
+
+	}
+
 }
-
-
-
