@@ -12,7 +12,7 @@ public class Duck {
 	private int lifeExpectancy;
 	
 
-	public Duck(String favoriteFood, int lifeExpectancy) {
+	public Duck() {
 		this.favoriteFood = favoriteFood;
 		this.lifeExpectancy = lifeExpectancy;
 	}
@@ -37,6 +37,17 @@ public class Duck {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+	}
+
+	public static Object getNumberOfCreations() {
+		
+		int created = 0;
+		return created++;
+	}
+
+	public String getColor() {
+		
+		return "";
 	}
 
 }
